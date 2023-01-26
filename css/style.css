@@ -1,0 +1,265 @@
+/* css reset */
+html{
+    scroll-behavior: smooth;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+/* css variable */
+:root{
+    --navbar-height:59px;
+
+}
+/* navigation bar */
+#navbar{
+display: flex;
+position:relative;
+position: sticky;
+/* top: 1px; */
+align-items: center;
+
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* z-index lagane se word ki visibility jyada hoti hai as compared to image ,,agar z-index lga de toh likha huwa paragraph ya heading upar ho jati hai aur backround image peeche ho jata hai */
+    z-index: -1;
+    /* opacittivity ki default value 1 hoti hai agar isse kam krenge toh img ka color dim hone lgta hai  dim hone lagta hai jisse  */
+    opacity: .6;
+    /* left: 0px; */
+    
+}
+
+/* navigation bar: logo and image */
+#logo{
+    margin: 2px 2px;
+    
+    
+}
+#logo img{
+    
+    margin: 2px 2px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+/* navigation bar: list and styling */
+
+
+ #navbar ul{
+    display: flex;
+    
+}
+#navbar li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+    /* padding: 20px; */
+}
+#navbar li a{
+    
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 20px 5px;
+    color:white;
+}
+#navbar li a:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+
+}
+/* home section */
+#home{
+    display: flex;
+    
+    height: 260px;
+
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+}
+#home::before{
+
+    content: "";
+    /* no repeat center center/cover krne se image ki quality bahut acchi ho jati hai  */
+    background:url('../img/main.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 400px;
+        width: 100%;
+    /* z-index lagane se word ki visibility jyada hoti hai as compared to image ,,agar z-index lga de toh likha huwa paragraph ya heading upar ho jati hai aur backround image peeche ho jata hai */
+    z-index: -1;
+    /* opacittivity ki default value 1 hoti hai agar isse kam krenge toh img ka color dim hone lgta hai  dim hone lagta hai jisse  */
+    opacity: 0.89;
+    top: 0px;        
+    left: 0px;
+
+
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+
+}
+#home p{
+    color: rgb(217, 244, 14);
+    /* font-size: 1.5rem; */
+    font-family: 'Bree Serif', serif;
+}
+/* services section */
+#services{
+    /* display: flex; */
+    margin: 0px;
+    display: flex;
+
+}
+#services .box{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    border: 2px solid rgb(20, 32, 199);
+    background-color: rgb(190, 14, 14);
+    color: white;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 2px 6px;
+}
+#services .box img{
+   height: 160px;
+   width: 300px;
+   
+   display: block;
+   margin: auto;
+   border-radius: 20px;
+}
+/* client section */
+#client-section{
+height: 293px;
+position: relative;
+/* border: 2px solid black; */
+margin: 20px 2px ;
+
+
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../img/clientsbck.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .7;
+}
+.client-item{
+padding: 34px;
+    display: flex;
+}
+#clients img{
+    height: 44px;
+    /* border: 2px solid black; */
+    /* margin: 150px 2px; */
+    border-radius: 10px;
+    /* padding: 2px 2px; */
+    /* background-color: white; */
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* contact -section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/4.jpg')no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#contact-box{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.2rem;
+}
+#contact-box input,
+#contact-box textarea{
+width: 100%;
+padding: 0.5rem;
+border-radius: 9px;
+font-size: 1.1rem;
+
+}
+#btn1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 8px;
+    border: 2px solid black;
+    background-color: bisque;
+    width: 485px;
+border-radius: 10px;
+font-size: 1.2rem;
+}
+#btn1:hover{
+    color: white;
+    background-color: brown;
+    cursor: pointer;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2px 22px;
+}
+
+
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 51px 6px;
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid pink;
+    background-color: brown;
+    color: rgb(19, 241, 22);
+    margin: 8px;
+    font-size: 1.5rem;
+border-radius: 10px;
+cursor: pointer;
+
+}
+.center{
+    text-align: center;
+
+}
